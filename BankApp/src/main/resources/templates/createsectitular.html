@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Secondary Holder to Account</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: RoyalBlue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            margin: 50px auto;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            width: 50%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            margin: 10px 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 300px;
+        }
+
+        input[type="submit"] {
+            background-color: ForestGreen;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: ForestGreen;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer {
+            background-color: RoyalBlue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            background-color: ForestGreen;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            outline: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Rumos Bank</h1>
+</header>
+<main>
+    <h2>Adicionar titular secundário a uma conta</h2>
+    <form method="get" action="/b">
+        <label for="accountNumber">Número da conta:</label>
+        <input type="number" id="accountNumber" name="accountNumber">
+        <label for="secondaryHolderNif">Nif do titular secundário:</label>
+        <input type="number" id="secondaryHolderNif" name="secondaryHolderNif">
+        <input type="submit" value="Adicionar">
+        <a href="/afterlogin">Voltar a trás</a>
+    </form>
+</main>
+<footer>
+    <p>&copy; 2023 Rumos Bank</p>
+</footer>
+</body>
+</html>

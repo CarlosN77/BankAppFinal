@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Error Page</title>
+  <style>
+    body {
+      background-color: lightgray;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: RoyalBlue;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      margin: 50px auto;
+      text-align: center;
+      background-color: white;
+      border-radius: 5px;
+      padding: 20px;
+      max-width: 600px;
+      border: 1px solid darkgrey;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    h2 {
+      color: RoyalBlue;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
+    button {
+      background-color: ForestGreen;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      border: none;
+    }
+
+    button:hover {
+      background-color: ForestGreen;
+    }
+
+    footer {
+      background-color: RoyalBlue;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Rumos Bank</h1>
+</header>
+<main>
+  <h2>Oops, algo correu mal!</h2>
+  <p th:text="${errorMsg}"></p>
+  <button onclick="window.history.back()">Go Back</button>
+</main>
+<footer>
+  <p>&copy; 2023 Rumos Bank</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: RoyalBlue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            margin: 50px auto;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            width: 50%;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid darkgrey;
+            border-radius: 4px;
+        }
+
+        input[type=submit] {
+            background-color: ForestGreen;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type=submit]:hover {
+            background-color: ForestGreen;
+        }
+
+        footer {
+            background-color: RoyalBlue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            background-color: ForestGreen;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            outline: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Rumos Bank</h1>
+</header>
+<main>
+    <h2>Login</h2>
+    <form th:action="@{/login}" th:object="${cliente}" th:method="post">
+    <label for="nif">NIF:</label><br>
+        <input type="text" id="nif" name="nif" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Entrar">
+        <a href="/index">Voltar a trás</a>
+    </form>
+</main>
+<footer>
+    <p>&copy; 2023 Rumos Bank</p>
+</footer>
+</body>
+</html>
+
+

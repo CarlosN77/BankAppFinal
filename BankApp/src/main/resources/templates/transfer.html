@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rumos Bank - Transfer Amount</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Global styles *//* Global styles */
+    body {
+      background-color: lightgray;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Header styles */
+    header {
+      background-color: RoyalBlue;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Main styles */
+    main {
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    input[type="number"], button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      box-sizing: border-box; /* Add this line */
+    }
+
+    input[type="number"] {
+      width: 100%;
+    }
+
+    button[type="submit"] {
+      background-color: ForestGreen;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: DarkGreen;
+    }
+
+
+    /* Footer styles */
+    footer {
+      background-color: RoyalBlue;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <h1>Rumos Bank</h1>
+</header>
+<main>
+  <h2>Fazer Transferência</h2>
+  <form method="post" action="/transfer">
+    <label for="fromAccount">Insira o número da conta de que quer transferir:</label>
+    <input type="number" id="fromAccount" name="fromAccount" required>
+
+    <label for="toAccount">Insira o número da conta para qual quer transferir:</label>
+    <input type="number" id="toAccount" name="toAccount" required>
+
+    <label for="amount">Quanto quer transferir:</label>
+    <input type="number" id="amount" name="amount" step="any" required>
+
+    <button type="submit">Transfer</button>
+  </form>
+</main>
+<footer>
+  <p>&copy; 2023 Rumos Bank</p>
+</footer>
+</body>
+</html>
+
